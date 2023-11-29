@@ -1,0 +1,441 @@
+
+*{
+	box-sizing: border-box;
+}
+a{text-decoration: none;}
+html{scroll-behavior: smooth;}
+body
+{margin: 0;
+padding: 0;
+font-family: 'DM Sans', sans-serif;
+color: #00334e;
+}
+
+.container{
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+}
+.bloco-2{
+	width: 50%;
+	float: left;
+}
+.bloco-3{
+	width: 33.3%;
+	float: left;
+	padding: 20px;
+}
+
+
+
+#topo{
+	background: #b1b1b1;
+	padding: 15px;
+	overflow: hidden;
+}
+#topo .menu ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+#topo .menu ul li{
+	display: inline-block;
+	padding: 50px;
+	font-weight: 500;
+}
+.menu ul li a{
+	color: #111;
+}
+.menu li a:hover{
+	color: 00cc99;
+}
+#topo .logo{
+	float: left;
+	vertical-align: middle;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+#topo .logo img{
+	vertical-align: middle;
+}	
+#topo .menu{
+	float: right;
+}
+
+#banner{
+	background: #b1b1b1;
+	overflow: hidden;
+	padding: 25px 15px;
+
+}
+#banner h2{
+	font-size: 40px;
+	margin-bottom: 15px;
+}
+#banner p{
+	font-size: 20px;
+	margin-bottom: 40px;
+}
+#banner input.icon-whats{
+	padding: 18px 5px 18px 40px;
+	border: none;
+	border-radius: 20px 0 0 20px;
+	background: url(../imagens/whatsicon.png) no-repeat 9px center, #fff;
+	background-size: 30px auto;
+	width: 60%;
+}
+
+#banner input::placeholder{
+	color: #00334e;
+}
+#banner .bt-whats{
+	padding: 20px 5px;
+	border: none;
+	border-radius: 0 20px 20px 0;
+	background: url(../imagens/setaicon.png) no-repeat center center, #00334e;
+	color: #fff;
+	width: 9%;
+	height: 50px;
+	cursor: pointer;
+	animation: seta 1.5s linear infinite;
+}
+.title{
+	text-align: center;
+	font-size: 35px;
+}
+.imagem img{
+	width: 100%;
+}
+.infos-trabalho h3{
+	margin-bottom: 0;
+}.infos-trabalho p{
+	margin-bottom: 10px;
+}
+.bt-destaque{
+	display: block;
+	width: 150px;
+	margin: 20px auto;
+	overflow: hidden;
+	text-align: center;
+	background: #00cc99;
+	padding: 15px 5px;
+	border-radius: 200px;
+	color: #fff;
+	margin-bottom: 100px;
+	position: relative;
+}
+.bt-destaque::after{
+	content: "";
+	display: block;
+	background: rgba(255,255,255,0.3);
+	width: 8px;
+	height: 70px;
+	position: absolute;
+	top: -10px; 
+	left: -10px;
+	transition: all 0.3s linear;
+	transform: rotate(32deg);
+	animation: raio 2.5s linear infinite;
+
+}
+.bt-destaque:hover::after{
+	left: 110%;
+}
+
+.receba .imagem{
+	text-align: center;
+	position: relative;
+}
+.receba .imagem img{
+	
+}
+.receba .imagem::before{
+	content: '1';
+	display: block;
+	background: #00cc99;
+	color: #fff ;
+	border-radius: 50%;
+	width: 41px;
+	font-size: 24px;
+	font-weight: bold;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	position: absolute;
+	top: 5px;
+	left: 50px;
+}
+.receba .bloco-3:nth-child(2) .imagem::before{
+	content: '2';
+}
+.receba .bloco-3:nth-child(3) .imagem::before{
+	content: '3';
+}
+#receba{
+	margin-top: 100px;
+	overflow: hidden;
+}
+#vantagens{
+	margin-top: 100px;
+	overflow: hidden;
+}
+#vantagens .numero{
+	width: 15%;
+    float: left;
+    font-size: 42px;
+    color: #dcdcdc;
+    text-align: center;
+    padding-top: 25px;
+    margin-left: 10%;
+}
+#vantagens .vantagens{
+	width: 75%;
+	padding: 0px 15px;
+	float: left;
+}
+#vantagens .vantagens h4{
+	margin-bottom: 0;
+}
+#vantagens .vantagens p{
+	margin-top: 10px;
+}
+#vantagens .infos{
+	width: 100%;
+	overflow: hidden;
+}
+#vantagens .rocket{
+	position: relative;
+}
+#vantagens .title{
+	margin-top: 100px;
+}
+#vantagens .back-foguete{
+	background: #00334e;
+    width: 90%;
+    height: 380px;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 45px;
+    z-index: -1;
+    margin-left: 5%;
+}
+.foguete{
+	text-align: center;
+	position: relative;
+	animation: foguete 1.5s ease infinite;
+	animation-direction:alternate;
+}
+.foguete img{
+	max-width: 100%;
+}
+#depoimentos{
+	margin-top: 100px;
+	overflow: hidden;
+}
+#depoimentos img{max-width: 100%;}
+#depoimentos .depoimentos{margin-top: 100px;position: relative;}
+#depoimentos .depoimentos .texto-depoimento p{
+	font-size: 20px;
+	padding: 10px 50px;
+	line-height: 36px;
+	font-style: italic;
+	margin-bottom: 40px;
+}
+#depoimentos .cliente{
+	overflow: hidden;
+	margin-top: 220px;
+
+}
+#depoimentos .cliente label{
+	float: left;
+	width: 50%;
+	opacity: 0.3;
+	transition: all 0.5s linear;
+}
+#depoimentos .cliente div{
+	float: left;
+	width: 90%;
+	padding: 0 20px;
+}
+#depoimentos .cliente  img{
+	float: left;
+	width: 15%;
+}
+.cliente h4{margin: 0;}
+.cliente p{margin: 0;}
+#depoimentos .texto-depoimento{
+	position: absolute;
+	left: 0;top: 40px;
+}
+#depoimentos input{display: none;}
+
+#dep-2 + .texto-depoimento,#dep-1 + .texto-depoimento{
+	opacity: 0;
+	z-index: -1;
+	transition: all 1s ease;
+}
+
+#dep-1:checked + .texto-depoimento{
+	opacity: 1;
+	z-index: 9;
+}
+#dep-1:checked ~ .texto-depoimento + .cliente label[for="dep-1"]{
+	opacity: 1;
+}
+#dep-2:checked + .texto-depoimento + .cliente label[for="dep-2"]{
+	opacity: 1;
+}
+#dep-2:checked + .texto-depoimento{
+	opacity: 1;
+	z-index: 9;
+}
+#depoimentos .text-depoimento{
+	position: absolute;
+	left: 0;top: 40px;
+}
+#rodape p{
+	text-align: center;
+	padding: 10px 25px;
+}
+
+#mascara{
+	position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.90);
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    z-index: -1;
+    transition: all 1s ease;
+}
+#mascara:target{
+	opacity: 1;
+	z-index: 9;
+}
+
+.menu-mobile {
+	list-style: none;
+	text-align: center;
+	margin-top: 20%;
+}
+.menu-mobile li{
+	margin-top: 20px;
+}
+.menu-mobile a{
+	color: #fff;
+	font-size: 24px;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 2px #333;
+	letter-spacing: 3px;
+}
+.menu-mobile a:hover{
+	color: #00cc99;;
+}
+.bt-menu{
+	display: none;
+	margin-top: 15px;
+}
+.bt-menu a{
+	width: 35px;
+	height: 30px;
+	position: relative;
+	border-top: solid 3px #00334e;
+	display: block;
+}
+.bt-menu a::before{
+	content: "";
+	width: 35px;
+	height: 3px;
+	display: block;
+	background-color: #00334e;
+	position: absolute;
+	top: 5px;
+}
+.bt-menu a::after{
+	content: "";
+	width: 15px;
+	height: 3px;
+	display: block;
+	background-color: #00334e;
+	position: absolute;
+	top: 12px;
+	right: 0;
+	transition: all 0.5s ease;
+}
+.bt-menu a:hover::after{
+	width: 35px;
+}
+
+.fechar{
+	width: 80%;
+    margin: 0 auto;
+    text-align: right;
+    margin-top: 25px;
+    font-size: 32px;
+    font-weight: bold;
+}
+.fechar a{
+	color: #b78b8b;
+	text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.25);
+}
+.menu-mobile{
+	padding: 10px;
+}
+
+/* criando menu mobile lateral */
+#mascara:target .menu-container{
+	width: 250px;
+}
+.menu-container{
+	width: 0px;
+    background: #fff;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transition: all 0.8s ease;
+}
+.menu-mobile a{
+	color: #444;
+}
+
+@keyframes direita{
+	from{margin-left: 120%}
+	to{margin-left: 0;}
+}
+@keyframes seta{
+	0%{background-position-x: center;}
+	75%{background-position-x: center;}
+	85%{background-position-x: 5%;}
+	92%{background-position-x: 65%;}
+	100%{background-position-x: center;}
+}
+@keyframes raio{
+	0%{left: -15px}
+	90%{left: -15px}
+	100%{left: 110%}
+}
+@keyframes foguete{
+	from{top: 0}
+	to{top: -35px;}
+}
+
+@media (max-width: 792px){
+	.bloco-2{width: 100%;}
+	.bloco-3{width: 50%;}
+	.bloco-4{width: 50%;}
+	#banner h2, #banner p, #banner form{text-align: center;}
+	#banner img{width: 90%;margin-top: 25px;}
+	#receba .bloco-3{width: 100%; text-align: center;}
+	.receba .imagem::before {left: 30%}
+	.menu .links{display: none;}
+	.bt-menu{display: block;}	
+}
+@media (max-width: 502px){
+	.bloco-3{width: 100%;}
+	.bloco-4{width: 100%;}
+	#depoimentos .cliente{margin-top: 350px;}
+}
