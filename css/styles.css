@@ -97,7 +97,7 @@ nav ul li a {
     left: 10%;
     width: 80%;
     height: 2px;
-    background: #fff;
+    background: #fbc60e;
     animation: expandLine 2s infinite;
 }
 
