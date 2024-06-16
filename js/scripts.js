@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const viewMoreButton = document.getElementById(buttonId);
         const galleryImages = document.querySelectorAll(`#${galleryId} img`);
 
-        if (viewMoreButton && galleryImages) {
+        if (viewMoreButton && galleryImages.length > 0) {
             const initialVisibleCount = 5;
 
             // Mostrar as primeiras imagens inicialmente
@@ -26,6 +26,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Configurar o botão de visualização para alternar entre mostrar mais e menos fotos
             viewMoreButton.addEventListener('click', function() {
+                if (viewMoreButton.dataset.clickDisabled === 'true') return;
+
+                viewMoreButton.dataset.clickDisabled = 'true';
+                setTimeout(() => viewMoreButton.dataset.clickDisabled = 'false', 300);
+
                 const isViewingMore = viewMoreButton.textContent === 'View More Photos';
                 galleryImages.forEach((img, index) => {
                     if (isViewingMore) {
@@ -81,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Configurar modal para as imagens de cuidados
     const careImages = document.querySelectorAll('#aftercare .aftercare-images img');
-    if (careImages) {
+    if (careImages.length > 0) {
         careImages.forEach(img => {
             img.addEventListener('click', function() {
                 openModal(img);
