@@ -149,7 +149,7 @@ social-icons a:nth-child(3) {
     background-size: cover;
     color: #fbc60e;
     text-align: center;
-    height: 20vh;
+    height: 100vh;
     position: relative;
     animation: floating 1s ease-in-out infinite;
 }
